@@ -1,0 +1,10 @@
+Host jump*
+  ProxyCommand none
+  ForwardAgent yes
+  StrictHostKeyChecking no
+  UserKnownHostsFile /dev/null
+  LogLevel ERROR
+ 
+Host *.tmcs
+  ProxyCommand ssh -q -W %h:%p -l craig.squire jump.ams.syseng.tmcs
+  User tmweb
